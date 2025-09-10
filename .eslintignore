@@ -1,0 +1,19 @@
+# Ignore everything except TS and Angular templates
+*.json
+*.md
+*.lock
+*.css
+*.scss
+
+# VSCode configs
+.vscode/
+
+# Angular config
+angular.json
+
+# Prettier config
+.prettierrc.json
+
+# Node modules
+node_modules/
+dist/

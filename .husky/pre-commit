@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running ESLint + Prettier on staged files..."
+npx lint-staged || exit 1
+
+echo "🏗️ Running Angular build check..."
+npm run build:check || exit 1
+
+echo "✅ All checks passed! Commit successful 🚀"
