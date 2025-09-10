@@ -7,6 +7,20 @@ const prettierPlugin = require('eslint-plugin-prettier');
 
 module.exports = tseslint.config(
   // ✅ TypeScript + Angular strict rules
+    {
+    ignores: [
+      '*.json',
+      '*.md',
+      '*.lock',
+      '*.css',
+      '*.scss',
+      '.vscode/**',
+      'angular.json',
+      '.prettierrc.json',
+      'node_modules/**',
+      'dist/**'
+    ]
+  },
   {
     files: ['**/*.ts'],
     extends: [
