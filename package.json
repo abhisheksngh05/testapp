@@ -1,3 +1,4 @@
+
 {
   "name": "testapp",
   "version": "0.0.0",
@@ -7,9 +8,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint \"src/**/*.{ts,html}\"",
+    "lint": "eslint \"src/**/*.{ts,html}\" --max-warnings=0",
     "prepare": "husky",
-    "format:check": "prettier --check \"**/*.{ts,html,scss,css,json,md}\"",
+    "format": "prettier --write \"src/**/*.{ts,html,scss,css,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,html,scss,css,json,md}\"",
     "build:check": "ng build --configuration=development --no-progress"
   },
   "prettier": {
@@ -56,5 +58,10 @@
     "prettier": "^3.6.2",
     "typescript": "~5.9.2",
     "typescript-eslint": "^8.40.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,html}": "eslint --max-warnings=0",
+    "src/**/*.{ts,html,css,scss,md,json}": "prettier --check"
   }
 }
+

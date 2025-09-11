@@ -49,6 +49,8 @@ module.exports = tseslint.config(
       '@angular-eslint/no-output-on-prefix': 'error',
       '@angular-eslint/use-pipe-transform-interface': 'error',
 
+      
+
       // 🔹 Strict TypeScript rules
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/no-explicit-any': 'error',

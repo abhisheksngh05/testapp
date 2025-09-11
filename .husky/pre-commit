@@ -4,6 +4,9 @@
 echo "🔍 Running ESLint + Prettier on staged files..."
 npx lint-staged || exit 1
 
+# echo "🎨 Checking formatting on full project..."
+# npm run format:check || exit 1
+
 echo "🏗️ Running Angular build check..."
 npm run build:check || exit 1
 
